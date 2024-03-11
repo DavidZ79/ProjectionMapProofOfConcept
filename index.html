@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Theatre.js Tutorial</title>
     <style>
         body {
@@ -22,37 +22,679 @@
 
 <script type="module">
     // Add JavaScript here
-    import 'https://cdn.jsdelivr.net/npm/@theatre/browser-bundles@0.5.0-insiders.88df1ef/dist/core-and-studio.js'
+    import 'https://cdn.jsdelivr.net/npm/@theatre/browser-bundles@0.7.0/dist/core-and-studio.min.js'
 
-    const { core, studio } = Theatre
+    const {core, studio} = Theatre
 
     studio.initialize()
 
-    const project = core.getProject('HTML Animation Tutorial')
+    const projectState = {
+        "sheetsById": {
+            "Sheet 1": {
+                "staticOverrides": {
+                    "byObject": {
+                        "Face": {
+                            "y": 87,
+                            "x": 419
+                        },
+                        "Heading 1": {
+                            "y": 5
+                        },
+                        "Mouth": {
+                            "y": 80
+                        }
+                    }
+                },
+                "sequence": {
+                    "subUnitsPerUnit": 30,
+                    "length": 10,
+                    "type": "PositionalSequence",
+                    "tracksByObject": {
+                        "Mouth": {
+                            "trackData": {
+                                "-dUvzmlPEZ": {
+                                    "type": "BasicKeyframedTrack",
+                                    "__debugName": "Mouth:[\"y\"]",
+                                    "keyframes": [
+                                        {
+                                            "id": "CfMFv3hzPe",
+                                            "position": 0,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 87
+                                        },
+                                        {
+                                            "id": "NQbaCoNGAL",
+                                            "position": 0.367,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 110
+                                        },
+                                        {
+                                            "id": "5VougvFX_3",
+                                            "position": 0.667,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 91
+                                        },
+                                        {
+                                            "id": "pcK5vYolyt",
+                                            "position": 0.867,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 91
+                                        },
+                                        {
+                                            "id": "5RZqiMDQSL",
+                                            "position": 0.967,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 110
+                                        },
+                                        {
+                                            "id": "lIVXTEYFeP",
+                                            "position": 1.1,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 87
+                                        },
+                                        {
+                                            "id": "BldoLc7Eif",
+                                            "position": 1.5,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 91
+                                        },
+                                        {
+                                            "id": "jZ3cYz2VG5",
+                                            "position": 1.833,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 91
+                                        },
+                                        {
+                                            "id": "gmvWrjLclh",
+                                            "position": 2.033,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 87
+                                        },
+                                        {
+                                            "id": "3XjIAhAgmL",
+                                            "position": 2.133,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 110
+                                        },
+                                        {
+                                            "id": "ue-H863Kjf",
+                                            "position": 2.2,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 87
+                                        },
+                                        {
+                                            "id": "WY-MrbM7D6",
+                                            "position": 2.233,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 87
+                                        },
+                                        {
+                                            "id": "AkZnZbrRZo",
+                                            "position": 2.333,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 110
+                                        },
+                                        {
+                                            "id": "-jvamahmSR",
+                                            "position": 2.467,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 87
+                                        },
+                                        {
+                                            "id": "UVt2jfyaF9",
+                                            "position": 2.533,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 110
+                                        },
+                                        {
+                                            "id": "e0S8cttydn",
+                                            "position": 2.6,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 87
+                                        },
+                                        {
+                                            "id": "Hn5VnX1Zwd",
+                                            "position": 2.833,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 87
+                                        },
+                                        {
+                                            "id": "_LEWMUJQ-9",
+                                            "position": 2.9,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 110
+                                        },
+                                        {
+                                            "id": "yQHmJxEaDE",
+                                            "position": 2.967,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 87
+                                        },
+                                        {
+                                            "id": "ox3tsjsVgs",
+                                            "position": 3.167,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 87
+                                        },
+                                        {
+                                            "id": "8uycfY-seO",
+                                            "position": 3.233,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 110
+                                        },
+                                        {
+                                            "id": "n9Hxh4nHH-",
+                                            "position": 3.3,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 99
+                                        },
+                                        {
+                                            "id": "RV_WPoyGsg",
+                                            "position": 3.367,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 110
+                                        },
+                                        {
+                                            "id": "tYPWIjPpW0",
+                                            "position": 3.433,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 87
+                                        }
+                                    ]
+                                },
+                                "EAD2vOhYJu": {
+                                    "type": "BasicKeyframedTrack",
+                                    "__debugName": "Mouth:[\"opacity\"]",
+                                    "keyframes": [
+                                        {
+                                            "id": "8fqUYoSGzt",
+                                            "position": 4.9,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 1
+                                        },
+                                        {
+                                            "id": "aorzQNelrF",
+                                            "position": 6.733,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 0
+                                        }
+                                    ]
+                                }
+                            },
+                            "trackIdByPropPath": {
+                                "[\"y\"]": "-dUvzmlPEZ",
+                                "[\"opacity\"]": "EAD2vOhYJu"
+                            }
+                        },
+                        "Face": {
+                            "trackData": {
+                                "rUlZoLBe7r": {
+                                    "type": "BasicKeyframedTrack",
+                                    "__debugName": "Face:[\"opacity\"]",
+                                    "keyframes": [
+                                        {
+                                            "id": "r3VMfpwvhp",
+                                            "position": 4.9,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 1
+                                        },
+                                        {
+                                            "id": "m6wmsPNrjO",
+                                            "position": 6.733,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 0
+                                        }
+                                    ]
+                                }
+                            },
+                            "trackIdByPropPath": {
+                                "[\"opacity\"]": "rUlZoLBe7r"
+                            }
+                        },
+                        "Heading 1": {
+                            "trackData": {
+                                "KJDDMiPxDY": {
+                                    "type": "BasicKeyframedTrack",
+                                    "__debugName": "Heading 1:[\"position\",\"x\"]",
+                                    "keyframes": [
+                                        {
+                                            "id": "GH4GiwUmVV",
+                                            "position": 0,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 0
+                                        },
+                                        {
+                                            "id": "RKv8Rla6wR",
+                                            "position": 1,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 96
+                                        }
+                                    ]
+                                },
+                                "d1noSG6us4": {
+                                    "type": "BasicKeyframedTrack",
+                                    "__debugName": "Heading 1:[\"position\",\"y\"]",
+                                    "keyframes": [
+                                        {
+                                            "id": "rr48OgpiLt",
+                                            "position": 0,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 0
+                                        },
+                                        {
+                                            "id": "HoGIgHAAI0",
+                                            "position": 1,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": -74
+                                        }
+                                    ]
+                                },
+                                "g1NVUNjAiS": {
+                                    "type": "BasicKeyframedTrack",
+                                    "__debugName": "Heading 1:[\"x\"]",
+                                    "keyframes": [
+                                        {
+                                            "id": "XnSsxMxAoc",
+                                            "position": 0,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 0
+                                        },
+                                        {
+                                            "id": "yr-CW7e8fy",
+                                            "position": 1.567,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 314
+                                        },
+                                        {
+                                            "id": "UY8zsiZq3j",
+                                            "position": 3.767,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": -123
+                                        },
+                                        {
+                                            "id": "KCghJooStD",
+                                            "position": 5.2,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": -39
+                                        }
+                                    ]
+                                },
+                                "9mKVUdl1cw": {
+                                    "type": "BasicKeyframedTrack",
+                                    "__debugName": "Heading 1:[\"y\"]",
+                                    "keyframes": [
+                                        {
+                                            "id": "73gLKK7037",
+                                            "position": 0,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5,
+                                                1,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 5
+                                        },
+                                        {
+                                            "id": "MjvH7B90wE",
+                                            "position": 1.567,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.16962365434228177,
+                                                2.5873209425623585,
+                                                0.6359615462099673,
+                                                -1.8658834714111094
+                                            ],
+                                            "type": "bezier",
+                                            "value": 244
+                                        },
+                                        {
+                                            "id": "eZFAu7pl3V",
+                                            "position": 3.067,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.47908283904462046,
+                                                2.7713752109726957,
+                                                1,
+                                                -4.088801884379234
+                                            ],
+                                            "type": "bezier",
+                                            "value": 392
+                                        },
+                                        {
+                                            "id": "TYpeb67U1Y",
+                                            "position": 3.767,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                1,
+                                                -5.755411808974387,
+                                                0,
+                                                -16.501128395717014
+                                            ],
+                                            "type": "bezier",
+                                            "value": 489
+                                        },
+                                        {
+                                            "id": "arWTCe5PPQ",
+                                            "position": 5.2,
+                                            "connectedRight": true,
+                                            "handles": [
+                                                0.5109475720282866,
+                                                5.879612181064565,
+                                                0.5,
+                                                0
+                                            ],
+                                            "type": "bezier",
+                                            "value": 390
+                                        }
+                                    ]
+                                }
+                            },
+                            "trackIdByPropPath": {
+                                "[\"position\",\"x\"]": "KJDDMiPxDY",
+                                "[\"position\",\"y\"]": "d1noSG6us4",
+                                "[\"x\"]": "g1NVUNjAiS",
+                                "[\"y\"]": "9mKVUdl1cw"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "definitionVersion": "0.4.0",
+        "revisionHistory": [
+            "OfKWO4E4CnY0mGN9"
+        ]
+    }
+
+    const project = core.getProject('Demo Animation', {
+        state: projectState
+    })
+
 
     const sheet = project.sheet('Sheet 1')
+
+    console.log('Loading audio...')
+    sheet.sequence.attachAudio({source: './demo_audio.m4a'}).then(() => {
+        console.log('Audio loaded!')
+    })
+
     const obj = sheet.object('Heading 1', {
+        x: 0,
         y: 0,
-        opacity: core.types.number(1, {range: [0, 1] }),
+        opacity: core.types.number(1, {range: [0, 1]}),
     })
 
     const articleHeadingElement = document.getElementById('article-heading')
 
-    obj.onValuesChange((obj) => {
-        articleHeadingElement.style.transform = `translateY(${obj.y}px)`
-        articleHeadingElement.style.opacity = obj.opacity
+    obj.onValuesChange(({x, y, opacity}) => {
+        articleHeadingElement.style.transform = `translateX(${x}px) translateY(${y}px)`;
+        articleHeadingElement.style.opacity = opacity
     })
 
     const face = sheet.object('Face', {
         x: 0,
         y: 0,
-        opacity: core.types.number(1, {range: [0, 1] }),
+        opacity: core.types.number(1, {range: [0, 1]}),
     })
 
     const mouth = sheet.object('Mouth', {
         x: 0,
         y: 0,
-        opacity: core.types.number(1, {range: [0, 1] }),
+        opacity: core.types.number(1, {range: [0, 1]}),
     })
 
     const faceElement = document.getElementById('face')
