@@ -15,7 +15,10 @@
     </style>
 </head>
 <body>
-<h1 id="article-heading" style="text-align: center">Welcome</h1>
+<h1 id="article-heading" style="text-align: center">Projection Mapping Proof Of Concept</h1>
+
+<img src="face-no-mouth.png" style="width: 25%; height: 25%" id="face" alt="Face without a mouth">
+<img src="mouth.png" style="width: 25%; height: 25%" id="mouth" alt="the mouse of the face without a mouth">
 
 <script type="module">
     // Add JavaScript here
@@ -39,6 +42,32 @@
         articleHeadingElement.style.transform = `translateY(${obj.y}px)`
         articleHeadingElement.style.opacity = obj.opacity
     })
+
+    const face = sheet.object('Face', {
+        x: 0,
+        y: 0,
+        opacity: core.types.number(1, {range: [0, 1] }),
+    })
+
+    const mouth = sheet.object('Mouth', {
+        x: 0,
+        y: 0,
+        opacity: core.types.number(1, {range: [0, 1] }),
+    })
+
+    const faceElement = document.getElementById('face')
+    const mouthElement = document.getElementById('mouth')
+
+    mouth.onValuesChange(({x, y, opacity}) => {
+        mouthElement.style.transform = `translateX(${x}px) translateY(${y}px)`;
+        mouthElement.style.opacity = opacity
+    })
+
+    face.onValuesChange(({x, y, opacity}) => {
+        faceElement.style.transform = `translateX(${x}px) translateY(${y}px)`;
+        faceElement.style.opacity = opacity
+    })
+
 
 </script>
 </body>
