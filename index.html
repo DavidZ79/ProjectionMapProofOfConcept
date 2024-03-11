@@ -33,6 +33,8 @@
         opacity: core.types.number(1, {range: [0, 1] }),
     })
 
+    const articleHeadingElement = document.getElementById('article-heading')
+
     obj.onValuesChange((obj) => {
         articleHeadingElement.style.transform = `translateY(${obj.y}px)`
         articleHeadingElement.style.opacity = obj.opacity
