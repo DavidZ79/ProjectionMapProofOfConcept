@@ -24,6 +24,7 @@
     // Add JavaScript here
     import 'https://cdn.jsdelivr.net/npm/@theatre/browser-bundles@0.7.0/dist/core-and-studio.min.js'
 
+    // destructuring theatre object: get core and studio
     const {core, studio} = Theatre
 
     studio.initialize()
@@ -660,26 +661,33 @@
         ]
     }
 
+    // init project object
     const project = core.getProject('Demo Animation', {
         state: projectState
     })
 
-
+    // get sheet from project
     const sheet = project.sheet('Sheet 1')
 
+    // attach audio file to sheet sequence
     console.log('Loading audio...')
     sheet.sequence.attachAudio({source: './demo_audio.m4a'}).then(() => {
         console.log('Audio loaded!')
     })
 
+    // attach objects to sheet object -----------------------------------------
+
+    // heading object
     const obj = sheet.object('Heading 1', {
         x: 0,
         y: 0,
         opacity: core.types.number(1, {range: [0, 1]}),
     })
 
+    // get DOM element for heading
     const articleHeadingElement = document.getElementById('article-heading')
 
+    // event listeners
     obj.onValuesChange(({x, y, opacity}) => {
         articleHeadingElement.style.transform = `translateX(${x}px) translateY(${y}px)`;
         articleHeadingElement.style.opacity = opacity
@@ -710,6 +718,7 @@
         faceElement.style.opacity = opacity
     })
 
+    // -------------------------------------------------------------------
 
 </script>
 </body>
